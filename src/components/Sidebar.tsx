@@ -6,7 +6,6 @@ import SidebarDropdown from "./ui/SidebarDropdown";
 import { FaRegUser, FaUsers, FaUserTie } from "react-icons/fa";
 import { MdAdminPanelSettings, MdOutlineSecurity, MdOutlineSettings } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
-import { IoSettingsSharp } from "react-icons/io5";
 
 const Sidebar = ({
   isOpen,
@@ -18,7 +17,7 @@ const Sidebar = ({
   console.log("isOpen", isOpen);
   return (
     <aside
-      className={`fixed inset-y-0 left-0 w-64 bg-[#212121] shadow-lg transform transition-transform duration-300 ease-in-out ${
+      className={`sidebarMain fixed inset-y-0 left-0 w-64 shadow-lg transform transition-transform duration-300 ease-in-out min-h-screen ${
         isOpen
           ? "-translate-x-full sidebar"
           : "translate-x-0 lg:translate-x-0 lg:static"
@@ -50,7 +49,7 @@ const Sidebar = ({
               icon={<FaRegUser />}
               title="Manage Users"
               items={[
-                { name: "All Users", href: "/users", icons: <FaUsers /> },
+                { name: "All Users", href: "/user", icons: <FaUsers /> },
                 {
                   name: "Admins",
                   href: "/admins",
@@ -79,7 +78,7 @@ const Sidebar = ({
           </li>
           <li className="sidebarBtn">
             <Link
-              href="/user"
+              href="/dashboard/user"
               className="flex items-center gap-2 px-4 text-white"
             >
              <FaUserTie />User

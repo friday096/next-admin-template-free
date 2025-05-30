@@ -14,7 +14,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
     };
   
     return (
-      <div className="flex h-screen">
+      <div className="dashboardLayout min-h-screen">
         {/* Sidebar */}
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
   

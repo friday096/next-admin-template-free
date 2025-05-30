@@ -35,7 +35,13 @@ body {
 }
 
 .sidebar {
+  background: var(--sideBarColor);
   transform: translateX(-100%);
+}
+
+.sidebarMain {
+  background: var(--sideBarColor);
+  z-index: 999;
 }
 
 .card {
@@ -105,4 +111,15 @@ input {
 .cardBg4 {
   background-color: #e9eeb3 !important;
   border-color: #e9eeb3 !important;
+}
+
+thead {
+  background: var(--sideBarColor);
+  color: #fff;
+}
+
+.dashboardLayout {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 }

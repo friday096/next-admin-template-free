@@ -80,15 +80,15 @@ const User: React.FC = () => {
             type="text"
             id="table-search"
             placeholder="Search for users"
-            className="block py-3 px-8 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-[#333333] dark:border-[#414141] dark:placeholder-gray-400 dark:text-white"
+            className="block py-3 px-5 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-[#333333] dark:border-[#414141] dark:placeholder-gray-400 dark:text-white"
           />
         </div>
       </div>
 
       {/* Table */}
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-[#333333] dark:text-white border-b border-[#c8c8c8] dark:border-gray-600">
+      <div className="w-full overflow-x-auto shadow-md sm:rounded-lg grid grid-cols-1">
+        <table className="min-w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead className="uppercase border-b border-[#c8c8c8] dark:border-gray-600 bg-gray-50 dark:bg-[#2a2a2a]">
             <tr>
               <th className="p-4">
                 <input id="checkbox-all" type="checkbox" className="w-4 h-4" />
@@ -114,18 +114,18 @@ const User: React.FC = () => {
                   className="bg-white border-b border-[#c8c8c8] dark:border-[#414141] dark:bg-[#212121] hover:bg-gray-50 dark:hover:bg-[#414141]"
                 >
                   <CheckboxCell id={user.id} />
-                  <td className="px-4 py-3">
+                  <td className="px-4 py-3 whitespace-nowrap">
                     {user.firstName} {user.lastName}
                   </td>
-                  <td className="px-4 py-3">{user.email}</td>
-                  <td className="px-4 py-3">{user.username}</td>
-                  <td className="px-4 py-3">
+                  <td className="px-4 py-3 whitespace-nowrap">{user.email}</td>
+                  <td className="px-4 py-3 whitespace-nowrap">
+                    {user.username}
+                  </td>
+                  <td className="px-4 py-3 whitespace-nowrap">
                     <StatusBadge />
                   </td>
-                  <td className="px-4 py-3 text-center">
-                    <a href="#" className="text-white">
-                      <HiOutlineDotsVertical />
-                    </a>
+                  <td className="px-4 py-3 text-center relative">
+                    <HiOutlineDotsVertical className="w-5 h-5" />
                   </td>
                 </tr>
               ))
